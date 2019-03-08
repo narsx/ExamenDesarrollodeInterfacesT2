@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_context"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".BMain">
+
+    <ImageView
+        android:id="@+id/planet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/planetearth"
+        />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vista" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="80sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/cohete"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/rocketlogo"
+                app:civ_border_color="#EEE"
+                app:civ_border_width="0dp"
+
+                app:civ_shadow="true"
+                app:civ_shadow_color="#FFF"
+                app:civ_shadow_radius="0" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="80dp"
+                android:layout_weight="1"
+                android:text="And no next generation"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_texto"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_marginTop="50dp"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/myswipe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="30dp">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/texto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="15dp"
+                        android:text="When we maneuver through the physical world, we do so with an innate recognition of our surroundings. Material Design is made to work in the same way. In other words, the physical world is governed by a set of rules and Material Design uses those rules to inform its design principles. It recreates the properties of our environment as the foundation for its own.
+
+This metaphor raises a question. If the rules that inform Material Design are the rules of the physical world, then what exactly are the rules of the physical world? How do we come to use them as keenly as we do? Where do they originate? Can we deliberately employ them? The real question I was after, can we apply the rules of the physical world to Material Design?
+
+Fortunately, these are the central questions of Immanuel Kant’s Critique of Pure Reason. The famed philosopher wrote The First Critique (as it is called) in response to the tangled state of philosophy at the time. In it, Kant details the process of our experience and shows how it gives structure to the world around us. He used The First Critique to provide a new foundation for knowledge from which the questions of philosophy can rightly be answered. For this post, however, I will use his findings to reframe Material Design behind the principles it is based on; The principles behind our experience of the physical world." />
+                </ScrollView>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="LEAVE" />
+
+            <Button
+                android:id="@+id/Stay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/design_default_color_primary_dark"
+                android:text="STAY"
+                android:textColor="#FEFEFE" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
